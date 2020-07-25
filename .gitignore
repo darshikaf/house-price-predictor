@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Datasets
+regression_model/datasets/*.csv
+
+# Models
+regression_model/trained_models/*.pkl
