@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import io
 import os
+import sys
 from pathlib import Path
 
 from setuptools import find_packages, setup
@@ -42,14 +42,6 @@ class PyTest(TestCommand):
 
         errno = pytest.main(self.pytest_args.split("|"))
         sys.exit(errno)
-
-# Import the README and use it as the long-description.
-# Note: this will only work if 'README.md' is present in your MANIFEST.in file!
-# try:
-#     with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
-#         long_description = '\n' + f.read()
-# except FileNotFoundError:
-#     long_description = DESCRIPTION
 
 ROOT_DIR = Path(__file__).resolve().parent
 PACKAGE_DIR = ROOT_DIR / NAME
